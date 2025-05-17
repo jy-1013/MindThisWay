@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mind This Way</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mindthisway.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mindthisway.js" defer></script>
+</head>
+
+    <body>
+        <div class="stars"></div>
+
+        <header>
+          <h1>Mind This Way</h1>
+          <p>Your Digital Mental Health Companion</p>
+          <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+        </header>     
+
+    <main id="app">
+       
+<section class="intro">
+    <img src="https://cdn-icons-png.flaticon.com/512/9231/9231566.png" alt="Cute telescope" width="100" class="floating-cloud"/>
+
+    <h2>Why Mind This Way?</h2>
+    <div class="rotating-quote" id="rotatingQuote">
+        💬 "Every day may not be good, but there is something good in every day."
+    </div>
+      
+    <p>We care about your mental wellness. This app helps you track your mood, reflect in a journal, and get quick mental health tips — anytime, anywhere.</p>
+  </section>
+  
+  <section class="features">
+    <h2>What You Can Do</h2>
+    <ul>
+      <li>📝 Log your daily thoughts in a journal</li>
+      <li>📊 Check your mood trends</li>
+      <li>🤖 Chat with MindBot for support</li>
+      <li>🔒 Private and secure — your data stays with you</li>
+    </ul>
+  </section>
+  
+  <section class="quote">
+    <blockquote>"Your mental health is a priority. Your happiness is essential. Your self-care is a necessity."</blockquote>
+  </section>
+  <!-- END: Homepage Additions -->
+  
+        <section id="login-section" class="hero fade-in">
+            <div class="hero-content">
+                <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Mental health icon" width="80" />
+                <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="Cute bear" width="80" class="mascot" />
+
+                <h2>Welcome to Mind This Way</h2>
+                <div class="welcome-bubble">
+                    <p>🌼 Hello sunshine! You're doing better than you think. 🌼</p>
+                  </div>                  
+
+                <p>Your mental health journey starts here. Private. Simple. Supportive.</p>
+                <input type="text" id="username" placeholder="Enter your name to begin" />
+                <br />
+                <button onclick="login()">Get Started</button>
+            </div>
+        </section>        
+
+        <section id="dashboard" class="hidden fade-in">
+            <div class="dashboard-container">
+            <h2>Welcome, <span id="displayName"></span></h2>
+            <button onclick="checkMood()">Mood Check-In</button>
+            <button onclick="openJournal()">Open Journal</button>
+            <button onclick="openChatbot()">Chatbot</button>
+            <button onclick="viewMoodHistory()">View Mood History</button>
+            <button onclick="logout()">Logout</button>
+            
+            <div id="moodPicker" class="hidden mood-picker">
+                <h3>How are you feeling?</h3>
+                <div class="mood-buttons">
+                    <button onclick="submitMood('happy')">😊 Happy</button>
+                    <button onclick="submitMood('okay')">😐 Okay</button>
+                    <button onclick="submitMood('anxious')">😟 Anxious</button>
+                    <button onclick="submitMood('stressed')">😣 Stressed</button>
+                    <button onclick="closeMoodPicker()">❌ Cancel</button>
+                </div>
+            </div>
+
+            <div id="journal" class="hidden">
+                <h3>📔Your Journal</h3>
+                <textarea id="journalEntry" rows="5" placeholder="Write about your day..."></textarea>
+                <button onclick="saveJournal()">Save Entry</button>
+                <div id="journalList"></div>
+            </div>
+
+            <div id="moodHistory" class="hidden">
+                <h3>📈 Mood History</h3>
+                <ul id="moodList"></ul>
+                <canvas id="moodChart" width="400" height="200"></canvas>
+            </div>
+
+            <div id="chatbot" class="hidden">
+                <h3>🤖 MindBot</h3>
+                <p>Hi! How can I support you today?</p>
+                <button onclick="chatResponse('stressed')">I'm feeling stressed</button>
+                <button onclick="chatResponse('anxious')">I'm feeling anxious</button>
+                <button onclick="chatResponse('okay')">I'm okay</button>
+                <div id="chatOutput"></div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mind This Way</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,403 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.1;
+    z-index: -1;
+    animation: twinkle 10s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.08; }
+    50% { opacity: 0.15; }
+}
+
+
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 6px #6a11cbaa;
+}
+
+/* START OF NEW HERO STYLES */
+.hero {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    padding: 5em 2em;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content {
+    max-width: 500px;
+    margin: auto;
+    background-color: #ffffffcc;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #2c3e50;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.hero input[type="text"] {
+    padding: 12px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+}
+/* END OF NEW HERO STYLES */
+
+/* Dashboard container styling */
+.dashboard-container {
+    max-width: 720px;
+    margin: 2em auto;
+    background: #fff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container > button {
+    margin-bottom: 10px;
+}
+
+.dashboard-container > div {
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    input[type="text"], textarea, button {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        padding: 1.5em;
+        margin: 1em;
+    }
+
+    .dashboard-container {
+        padding: 1em;
+        margin: 1em;
+    }
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #5b0fcb, #1a63dc);
+    transform: scale(1.05);
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 6px #6a11cbaa;
+}
+
+/* Card-style containers for journal, chatbot, mood history */
+#journal,
+#moodHistory,
+#chatbot {
+    background-color: #f9fbff; /* Updated: soft light blue background */
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    margin-top: 1.5em;
+    transition: all 0.3s ease;
+}
+
+/* Fade-in animation */
+.fade-in {
+    animation: fadeIn ease 0.6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Homepage Additional Sections */
+.intro, .features, .quote {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 720px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.intro img {
+    margin-bottom: 1em;
+}
+
+.features ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.quote blockquote {
+    font-style: italic;
+    color: #555;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0.5em;
+}
+
+/* 🌙 Dark Mode Styles */
+body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark header {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark .dashboard-container,
+body.dark .hero-content,
+body.dark #journal,
+body.dark #moodHistory,
+body.dark #chatbot,
+body.dark .intro,
+body.dark .features,
+body.dark .quote {
+    background-color: #1e1e1e;
+    color: #eee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark button {
+    background: linear-gradient(to right, #444, #666);
+    color: #fff;
+}
+
+body.dark button:hover {
+    background: linear-gradient(to right, #333, #555);
+}
+
+.theme-toggle {
+    margin-top: 10px;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    color: white;
+    background-color: #6a11cb;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: #4e0bbf;
+}
+
+.welcome-bubble {
+    background-color: #fff9f9;
+    border: 2px dashed #ffd6e8;
+    padding: 1em;
+    border-radius: 15px;
+    font-size: 1.1em;
+    color: #444;
+    margin: 1em auto;
+    max-width: 350px;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.mascot {
+    margin-bottom: 10px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.rotating-quote {
+    font-style: italic;
+    color: #444;
+    background-color: #fff5f7;
+    padding: 1em;
+    border-left: 4px solid #ffb6c1;
+    border-radius: 10px;
+    margin-top: 1.2em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.05em;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+body, .dashboard-container, .hero-content, #journal, #moodHistory, #chatbot {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  .floating-cloud {
+    animation: floatCloud 6s ease-in-out infinite;
+}
+
+@keyframes floatCloud {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.mood-picker {
+  background: linear-gradient(145deg, #fdfbfb, #ebedee);
+  border: 2px dashed #d8e3f0;
+  padding: 2em;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 450px;
+  margin: 2em auto;
+  animation: fadeIn 0.6s ease;
+  transition: all 0.3s ease;
+}
+
+.mood-picker h3 {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.mood-buttons button {
+  font-size: 1.3em;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.mood-buttons button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  color: #222;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.mood-buttons button:active {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
